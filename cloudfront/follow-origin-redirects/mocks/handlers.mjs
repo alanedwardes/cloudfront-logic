@@ -1,5 +1,9 @@
 import { http, HttpResponse } from "msw";
 
+export const mockHandlerState = {
+  failRequests: 0,
+};
+
 export const handlers = [
 
   http.head("https://origin.example.com/query/files/image.jpeg", ({ request }) => {
@@ -20,6 +24,11 @@ export const handlers = [
 
   http.head("https://origin.example.com/ok", ({ request }) => {
     return HttpResponse.text("ok");
+  }),
+
+  http.head("https://origin.example.com/fail", ({ request }) => {
+    mockHandlerState.failRequests++;
+    return HttpResponse.text("fail", { status: 500 });
   }),
   
 ];
