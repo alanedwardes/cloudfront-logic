@@ -1,12 +1,14 @@
 import { handler } from "../src/index.mjs";
 import { viewerRequestWithQueryParams } from "./viewerRequestWithQueryParams.mjs";
 import { viewerRequestWithCookies } from "./viewerRequestWithCookies.mjs";
+import { viewerRequestPassthrough } from "./viewerRequestPassthrough.mjs";
 import { server } from "../mocks/node";
 import assert from 'assert';
 
 server.listen();
 
 describe("handler", function () {
+  
   it("follows redirect with query parameters", async () => {
     const result = await handler(viewerRequestWithQueryParams);
     assert.deepEqual(result, {
@@ -38,6 +40,7 @@ describe("handler", function () {
       uri: "/file.JPG",
     });
   });
+
   it("follows redirect with cookies", async () => {
     const result = await handler(viewerRequestWithCookies);
     assert.deepEqual(result, {
@@ -69,4 +72,10 @@ describe("handler", function () {
       uri: "/file.JPG",
     });
   });
+
+  it("passes through non-redirect responses", async () => {
+    const result = await handler(viewerRequestPassthrough);
+    assert.deepEqual(result, viewerRequestPassthrough.Records[0].cf.request);
+  });
+
 });
