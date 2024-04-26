@@ -1,5 +1,5 @@
 # follow-origin-redirects
-An **Origin Request** Lambda@Edge function definiton which does the following:
+An **Origin Request** Lambda@Edge function definition which does the following:
 * Attempts to make a HEAD request to the origin using the same parameters as CloudFront itself (with 3 retries)
 * If the response status code is a redirect, rewrite the request to the redirect location
 * If the response status code is not a redirect, do nothing
