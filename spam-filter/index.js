@@ -1,12 +1,12 @@
 function handler(event) {
     // Prefix filters to apply to the path - for example https://example.com/admin*
-    var prefixes = ["/cms", "/portal", "/admin", "/backoffice", "/downloader", "/vendor", "/contrib", "/orchard", "/cubemail", "/confluence", "/index.action"];
+    var prefixes = ["/cms", "/portal", "/admin", "/backoffice", "/downloader", "/vendor", "/contrib", "/orchard", "/cubemail", "/confluence"];
     
     // Less-specific matches anywhere in the path - for example */phpmyadmin/*
     var matches = ["/.env", "/cgi-bin/", "/phpmyadmin/", "/sqlmanager/", "/.git/", "/.well-known/", "/wordpress/", "/wp-", "/wp/", "/wp1/", "/wp2/", "/zb_users/", "/rdweb/", "/fckeditor/", "/nmaplowercheck", "/.vscode/", "/.vs/", "/alfa_data/"];
     
     // Suffix matches to apply to the path - for example *.php
-    var suffixes = [".php", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".ds_store", "sftp.json", "sftp-config.json", "/rwservlet"];
+    var suffixes = [".php", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".hsp", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".action", ".ds_store", "sftp.json", "sftp-config.json", "/rwservlet"];
 
     // Partial user agent matches
     var userAgents = ["censysinspect", "go-http-client"];
