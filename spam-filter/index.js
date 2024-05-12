@@ -6,7 +6,7 @@ function handler(event) {
     var matches = ["/.env", "/cgi-bin/", "/phpmyadmin/", "/sqlmanager/", "/.git/", "/.well-known/", "/wordpress/", "/wp-", "/wp/", "/wp1/", "/wp2/", "/zb_users/", "/rdweb/", "/fckeditor/", "/nmaplowercheck", "/.vscode/", "/.vs/", "/alfa_data/"];
     
     // Suffix matches to apply to the path - for example *.php
-    var suffixes = [".php", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".hsp", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".action", ".ds_store", "sftp.json", "sftp-config.json", "/rwservlet"];
+    var suffixes = [".php", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".hsp", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".action", ".ds_store", ".alfa", "sftp.json", "sftp-config.json", "/rwservlet"];
 
     // Partial user agent matches
     var userAgents = ["censysinspect", "go-http-client"];
