@@ -3,7 +3,7 @@ function handler(event) {
     var prefixes = ["/cms", "/backoffice", "/downloader", "/vendor", "/contrib", "/orchard", "/cubemail", "/confluence"];
     
     // Less-specific matches anywhere in the path - for example */phpmyadmin/*
-    var matches = ["/.env", "/cgi-bin/", "/phpmyadmin/", "/sqlmanager/", "/.git/", "/.well-known/", "/wordpress/", "/wp-", "/wp/", "/wp1/", "/wp2/", "/zb_users/", "/rdweb/", "/fckeditor/", "/nmaplowercheck", "/.vscode/", "/.vs/", "/alfa_data/"];
+    var matches = ["/.env", "/cgi-bin/", "/phpmyadmin/", "/sqlmanager/", "/.git/", "/.well-known/", "/wordpress/", "/wp-", "/wp/", "/wp1/", "/wp2/", "/zb_users/", "/rdweb/", "/fckeditor/", "/nmaplowercheck", "/.vscode/", "/.vs/", "/alfa_data/", "/phpinfo"];
     
     // Suffix matches to apply to the path - for example *.php
     var suffixes = [".php", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".hsp", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".action", ".ds_store", ".alfa", "sftp.json", "sftp-config.json", "/rwservlet", ".pem"];
