@@ -9,7 +9,7 @@ function handler(event) {
     var suffixes = [".php", ".php3", ".php4", ".php5", ".php6", ".php7", ".cgi", ".pl", ".cfm", ".jhtml", ".shtml", ".jsa", ".hsp", ".jsp", ".asp", ".aspx", ".ashx", ".do", ".action", ".ds_store", ".alfa", "sftp.json", "sftp-config.json", "/rwservlet", ".pem"];
 
     // Partial user agent matches
-    var userAgents = ["censysinspect", "go-http-client", "palo alto networks"];
+    var userAgents = ["censysinspect", "go-http-client", "palo alto networks", "HyperMegaBotGettingOnlyHTMLsFromYourWebsite"];
 
     var uri = event.request.uri.toLowerCase();
     var agent = (((event.request.headers['user-agent'] ?? {})['value']) ?? '').toLowerCase();
